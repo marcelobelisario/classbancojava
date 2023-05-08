@@ -6,12 +6,22 @@ public class Caixa {
     private int id;
     private static int contador=1;
 
-    public Caixa() {
+    private Caixa() {
         Caixa.senha=1;
         this.id=contador;
         Caixa.contador++;
     }
-
+    
+    public static Caixa criarObjeto(){
+        if(contador < 2){
+            return new Caixa();
+        }
+        else{
+            System.out.println("Operacao invalida!");
+            return null;
+        }
+    } 
+    
     public static int getSenha() {
         return senha;
     }
@@ -33,7 +43,7 @@ public class Caixa {
         Caixa.senha++;
     }
     
-    public void imprimirQuantObjetos(){
+    public static void imprimirQuantObjetos(){
         System.out.println("O numero de objetos criados eh: "+contador);
     }
     
