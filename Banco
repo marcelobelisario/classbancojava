@@ -4,17 +4,19 @@ package banco;
 public class Banco {
 
     public static void main(String[] args) {
-        Caixa c1 = new Caixa();
-        Caixa c2 = new Caixa();
-        Caixa c3 = new Caixa();
-        Caixa c4 = new Caixa();
-        Caixa c5 = new Caixa();
+        Caixa c1 = Caixa.criarObjeto();
+        Caixa c2 = Caixa.criarObjeto();
+        Caixa c3 = Caixa.criarObjeto();
+        Caixa c4 = Caixa.criarObjeto();
+        Caixa c5 = Caixa.criarObjeto();
         
         c1.chamarCliente();
         c2.chamarCliente();
         c3.chamarCliente();
         c4.chamarCliente();
         c5.chamarCliente();
+        
+        Caixa.imprimirQuantObjetos();
         
         
     }
