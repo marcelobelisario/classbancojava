@@ -1,0 +1,41 @@
+
+package banco;
+
+public class Caixa {
+    private static int senha;
+    private int id;
+    private static int contador=1;
+
+    public Caixa() {
+        Caixa.senha=1;
+        this.id=contador;
+        Caixa.contador++;
+    }
+
+    public static int getSenha() {
+        return senha;
+    }
+
+    public static void setSenha(int senha) {
+        Caixa.senha = senha;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    void chamarCliente(){          
+        System.out.println("Favor, cliente coma a senha "+this.senha+" comparecer ao caixa "+this.id);
+        this.senha++;
+    }
+    
+    public void imprimirQuantObjetos(){
+        System.out.println("O numero de objetos criados eh: "+contador);
+    }
+    
+    
+}
