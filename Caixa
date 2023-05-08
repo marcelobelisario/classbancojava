@@ -29,8 +29,8 @@ public class Caixa {
     }
     
     void chamarCliente(){          
-        System.out.println("Favor, cliente coma a senha "+this.senha+" comparecer ao caixa "+this.id);
-        this.senha++;
+        System.out.println("Favor, cliente coma a senha "+Caixa.senha+" comparecer ao caixa "+this.id);
+        Caixa.senha++;
     }
     
     public void imprimirQuantObjetos(){
